@@ -832,16 +832,16 @@ class Text : public Shape
     std::string content;
     Font font;
 
-    double measureTextWidth(std::string const &text, Font const &font) const
+    double measureTextWidth(std::string const &text, Font const &text_font) const
     {
         // Implement text width measurement based on font
-        return text.length() * font.getSize() / 1.5;  // approximation
+        return text.length() * text_font.getSize() / 1.5;  // approximation
     }
 
-    double measureTextHeight(Font const &font) const
+    double measureTextHeight(Font const &text_font) const
     {
         // Implement text height measurement based on font
-        return font.getSize();  // approximation
+        return text_font.getSize();  // approximation
     }
 };
 
